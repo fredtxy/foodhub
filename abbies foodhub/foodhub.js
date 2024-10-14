@@ -1,11 +1,13 @@
-const btn1 = document.getElementById('btn1');
-const btn2 = document.getElementById('btn2')
-const item1 = document.getElementById('item1');
-const item2 = document.getElementById('item2');
+function addToCart(event) {
+    const itemCard = event.target.closest('.catecards');
+    const cloneCard = itemCard.cloneNode(true);
+    const button = cloneCard.querySelector('button');
+if(button) button.remove();
+document.getElementById('cartItems').appendChild(cloneCard);
+}
 
-btn1.onclick = function() {
-    item1.style.display = 'block';
-}
-btn2.onclick = function() {
-    item2.style.display = 'block';
-}
+const addToCartButtons = document.querySelectorAll('.add-cart-btn');
+
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', addToCart);
+});
