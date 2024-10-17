@@ -518,7 +518,7 @@
     color: whitesmoke;
 }
 .cartpages{
-    background: #9c8c66;
+    background:#9c8c66;
     height: 80vh;
     width: 90%;
     border-radius: 15px;
@@ -531,4 +531,20 @@
     border-radius: 15px;
     margin-left: 70px;
 
+}
+.cart-container {
+    display: inline-block;
+    vertical-align: top;
+    width: 143px;
+    height: 260px;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.cart {
+    white-space: nowrap;
+    overflow-x: auto;
+    display: flex;
+    gap: 10px;
+    margin-left: 100px;
 }
